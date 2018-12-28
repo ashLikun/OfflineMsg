@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+	<!--类的全包名-->
+    <class>com.qiuzhping.openfire.plugin.OfflineMsg</class>
+    <!--插件名称-->
+    <name>OfflineMsg</name>
+    <!--描述信息-->
+    <description>离线消息处理优化</description>
+    <!--作者信息-->
+    <author>likun</author>
+    <!--版本信息-->
+    <version>1.0.8</version>
+    <!--创建、修改信息-->
+    <date>27/12/2018</date>
+    <!--最低兼容版本的openfire-->
+    <minServerVersion>4.2.3</minServerVersion>
+</plugin>

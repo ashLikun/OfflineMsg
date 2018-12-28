@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="OpenfirePlugins:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/OfflineMsg</output-path>
+    <root id="archive" name="OfflineMsg.jar">
+      <element id="module-output" name="OfflineMsg" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/res/plugin.xml" />
+    </root>
+  </artifact>
+</component>

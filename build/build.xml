@@ -1,0 +1,41 @@
+<project name="Webapp Precompilation" default="openfire-plugins" basedir=".">
+    <property file="build.properties" />
+    <property name="java.jar.dir" value="${app.path}/java-dist" />
+    <property name="java.jar" value="${java.jar.dir}/plugin-${plugin.name}.jar" />
+    <target name="java-jar">
+        <mkdir dir="${java.jar.dir}" />
+        <jar jarfile="${java.jar}">
+            <fileset dir="${app.path}/out/production/OfflineMsg" includes="**/*.class" />
+        </jar>
+    </target>
+    <!-- 生成可部署的插件包 -->
+    <target name="plug-jar">
+        <!-- 插件插件包相关lib -->
+        <mkdir dir="${app.path}/${plugin.name}/lib" />
+        <copy file="${java.jar}" todir="${app.path}/${plugin.name}/lib" />
+
+        <copy todir="${app.path}/${plugin.name}">
+            <!--plugin.xml文件-->
+            <fileset dir="${plugin.res.path}" includes="*.*" />
+            <!--plugin.xml文件-->
+            <fileset dir="${plugin.java.path}" includes="*.*" />
+        </copy>
+        <!-- 产生可部署插件包 -->
+        <jar jarfile="${app.path}/${plugin.name}.jar">
+            <fileset dir="${app.path}/${plugin.name}" includes="**/**" />
+        </jar>
+        <delete dir="${app.path}/${plugin.name}" />
+        <delete dir="${app.path}/java-dist" />
+    </target>
+
+    <!-- 清理生成的文件 -->
+    <target name="cleanALL">
+        <delete file="${app.path}/${plugin.name}.jar" />
+        <delete dir="${app.path}/${plugin.name}" />
+        <delete dir="${app.path}/java-dist" />
+    </target>
+
+    <target name="openfire-plugin" depends="cleanALL,java-jar" />
+    <target name="openfire-plugins" depends="cleanALL,java-jar,plug-jar" />
+
+</project>
