@@ -191,8 +191,10 @@ public class OfflineMsg implements PacketInterceptor, Plugin, ClearCacheListener
                     debug("WWWWWWW-----  start put");
                     CACHE_CHAT_CONNECTION.put(pingRequest.getID(), params, 5);
                     // JID is of the form <user@domain>
+
                     if (recipient.getResource() == null) {
                         for (JID route : routingTable.getRoutes(recipient, null)) {
+                            debug("WWWWWWW-----  routePacket" + route.getNode());
                             routingTable.routePacket(route, pingRequest, false);
                         }
                     } else {

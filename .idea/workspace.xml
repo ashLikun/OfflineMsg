@@ -7,19 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d208a636-fd56-4711-93f0-1549e2e3e509" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/CacheParams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/ClearCacheListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/DefaultLocalCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/ICache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OfflineMsg.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/OfflineMsg/OfflineMsg.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OfflineMsg/OfflineMsg.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OfflineMsg/com/qiuzhping/openfire/plugin/OfflineMsg$MyIQResultListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OfflineMsg/com/qiuzhping/openfire/plugin/OfflineMsg$MyIQResultListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OfflineMsg/com/qiuzhping/openfire/plugin/OfflineMsg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OfflineMsg/com/qiuzhping/openfire/plugin/OfflineMsg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OfflineMsg/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OfflineMsg/plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/OfflineMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/OfflineMsg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/plugin.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,12 +62,13 @@
     <session id="-258730021">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -102,7 +91,7 @@
         <counts>
           <entry key="class" value="1" />
           <entry key="dummy" value="2" />
-          <entry key="java" value="3170" />
+          <entry key="java" value="3233" />
           <entry key="properties" value="35" />
           <entry key="xml" value="61" />
         </counts>
@@ -110,7 +99,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="3170" />
+          <entry key="JAVA" value="3233" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="35" />
           <entry key="XML" value="61" />
@@ -123,8 +112,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/OfflineMsg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5215">
-              <caret line="228" column="36" lean-forward="true" selection-start-line="228" selection-start-column="19" selection-end-line="228" selection-end-column="36" />
+            <state relative-caret-position="372">
+              <caret line="144" column="5" lean-forward="true" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,7 +124,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/DefaultLocalCache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2691">
+            <state relative-caret-position="2755">
               <caret line="118" column="19" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -147,7 +136,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/ICache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
+            <state relative-caret-position="522">
               <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -254,7 +243,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -285,6 +273,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -393,17 +382,17 @@
       <workItem from="1546016494874" duration="3564000" />
       <workItem from="1546050412653" duration="32868000" />
       <workItem from="1546230296161" duration="20107000" />
+      <workItem from="1546256610636" duration="1626000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81932000" />
+    <option name="totallyTimeSpent" value="83558000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27611113" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.28055555" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -423,7 +412,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32903227" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info active="true" anchor="right" id="Ant Build" order="1" visible="true" weight="0.24944444" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24944444" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -653,20 +642,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/IQRouter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2090#2091#0" expanded="true" />
-            <element signature="e#2129#2130#0" expanded="true" />
-            <element signature="e#21428#21429#0" expanded="true" />
-            <element signature="e#21482#21483#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/IQRouter.java" />
     <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/util/TaskEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -674,16 +650,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/OfflineMsgOld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="69" selection-end-line="254" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/OfflineMsgOld.java" />
     <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/session/Session.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
@@ -716,12 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
           <caret line="1136" column="50" selection-start-line="1136" selection-start-column="50" selection-end-line="1136" selection-end-column="50" />
-          <folding>
-            <element signature="e#6148#6149#0" expanded="true" />
-            <element signature="e#6179#6180#0" expanded="true" />
-            <element signature="e#49589#49590#0" expanded="true" />
-            <element signature="e#49650#49651#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -729,12 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="73" column="20" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
-          <folding>
-            <element signature="e#2230#2231#0" expanded="true" />
-            <element signature="e#2268#2269#0" expanded="true" />
-            <element signature="e#2323#2324#0" expanded="true" />
-            <element signature="e#2366#2367#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -815,10 +770,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/ICache.java">
+    <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/OfflineMsg.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state relative-caret-position="372">
+          <caret line="144" column="5" lean-forward="true" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -827,7 +782,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/DefaultLocalCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2691">
+        <state relative-caret-position="2755">
           <caret line="118" column="19" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -835,10 +790,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/OfflineMsg.java">
+    <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/ICache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5215">
-          <caret line="228" column="36" lean-forward="true" selection-start-line="228" selection-start-column="19" selection-end-line="228" selection-end-column="36" />
+        <state relative-caret-position="522">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
