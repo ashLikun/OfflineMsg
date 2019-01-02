@@ -23,13 +23,13 @@ import java.util.concurrent.TimeUnit;
  * <p>
  * 功能介绍：
  */
-public class DefaultLocalCache
-        implements ICache<String, CacheParams> {
+public class DefaultLocalCache<K, V>
+        implements ICache<K, V> {
     private static final Log Logger = LogFactory.getLog(DefaultLocalCache.class);
     private ClearCacheListener clearCacheListener;
     private static final DefaultLocalCache instance = new DefaultLocalCache();
-    ConcurrentHashMap<String, SoftReference<CacheParams>>[] caches;
-    ConcurrentHashMap<String, Long> expiryCache;
+    ConcurrentHashMap<K, SoftReference<V>>[] caches;
+    ConcurrentHashMap<K, Long> expiryCache;
     private ScheduledExecutorService scheduleService;
 
     private void DefaultLocalCache() {
@@ -81,7 +81,7 @@ public class DefaultLocalCache
 
     public boolean clear() {
         if (this.caches != null) {
-            for (ConcurrentHashMap<String, SoftReference<CacheParams>> cache : this.caches) {
+            for (ConcurrentHashMap<K, SoftReference<V>> cache : this.caches) {
                 cache.clear();
             }
         }
@@ -91,12 +91,12 @@ public class DefaultLocalCache
         return true;
     }
 
-    public boolean containsKey(String key) {
+    public boolean containsKey(K key) {
         return getCache(key).containsKey(key);
     }
 
-    public CacheParams get(String key) {
-        SoftReference<CacheParams> sr = getCache(key).get(key);
+    public V get(K key) {
+        SoftReference<V> sr = getCache(key).get(key);
         if (sr == null) {
             this.expiryCache.remove(key);
             return null;
@@ -104,30 +104,30 @@ public class DefaultLocalCache
         return sr.get();
     }
 
-    public Set<String> keySet() {
+    public Set<K> keySet() {
         return this.expiryCache.keySet();
     }
 
-    public CacheParams put(String key, CacheParams value) {
+    public V put(K key, V value) {
         return put(key, value, -1);
     }
 
-    public CacheParams put(String key, CacheParams value, int outTime) {
-        SoftReference<CacheParams> res = getCache(key).put(key, new SoftReference(value));
+    public V put(K key, V value, int outTime) {
+        SoftReference<V> res = getCache(key).put(key, new SoftReference(value));
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.SECOND, outTime);
         expiryCache.put(key, calendar.getTime().getTime());
         return res == null ? null : res.get();
     }
 
-    public CacheParams put(String key, CacheParams value, Date expiry) {
-        SoftReference<CacheParams> res = getCache(key).put(key, new SoftReference(value));
+    public V put(K key, V value, Date expiry) {
+        SoftReference<V> res = getCache(key).put(key, new SoftReference(value));
         expiryCache.put(key, expiry.getTime());
         return res == null ? null : res.get();
     }
 
 
-    public void remove(String key) {
+    public void remove(K key) {
         getCache(key).clear();
         this.expiryCache.remove(key);
     }
@@ -136,17 +136,17 @@ public class DefaultLocalCache
         return this.expiryCache.size();
     }
 
-    public Collection<CacheParams> values() {
-        Collection<CacheParams> values = new ArrayList();
-        for (ConcurrentHashMap<String, SoftReference<CacheParams>> cache : this.caches) {
-            for (SoftReference<CacheParams> sr : cache.values()) {
+    public Collection<V> values() {
+        Collection<V> values = new ArrayList();
+        for (ConcurrentHashMap<K, SoftReference<V>> cache : this.caches) {
+            for (SoftReference<V> sr : cache.values()) {
                 values.add(sr.get());
             }
         }
         return values;
     }
 
-    private ConcurrentHashMap<String, SoftReference<CacheParams>> getCache(String key) {
+    private ConcurrentHashMap<K, SoftReference<V>> getCache(K key) {
         long hashCode = key.hashCode();
         if (hashCode < 0L) {
             hashCode = -hashCode;
@@ -155,10 +155,10 @@ public class DefaultLocalCache
         return this.caches[moudleNum];
     }
 
-    private void checkValidate(String key) {
+    private void checkValidate(K key) {
         if (key != null && expiryCache.get(key) != null && expiryCache.get(key) != -1L && new Date(expiryCache.get(key)).before(new Date())) {
             try {
-                CacheParams params = get(key);
+                V params = get(key);
                 if (null != clearCacheListener && params != null) {
                     clearCacheListener.doClear(params);
                 }
@@ -170,19 +170,19 @@ public class DefaultLocalCache
     }
 
     private void checkAll() {
-        Iterator<String> iter = this.expiryCache.keySet().iterator();
+        Iterator<K> iter = this.expiryCache.keySet().iterator();
         while (iter.hasNext()) {
-            String key = iter.next();
+            K key = iter.next();
             checkValidate(key);
         }
     }
 
     class CheckOutOfDateSchedule
             implements Runnable {
-        ConcurrentHashMap<String, SoftReference<CacheParams>>[] caches;
-        ConcurrentHashMap<String, Long> expiryCache;
+        ConcurrentHashMap<K, SoftReference<V>>[] caches;
+        ConcurrentHashMap<K, Long> expiryCache;
 
-        public CheckOutOfDateSchedule(ConcurrentHashMap<String, SoftReference<CacheParams>>[] caches, ConcurrentHashMap<String, Long> expiryCache) {
+        public CheckOutOfDateSchedule(ConcurrentHashMap<K, SoftReference<V>>[] caches, ConcurrentHashMap<K, Long> expiryCache) {
             this.caches = caches;
             this.expiryCache = expiryCache;
         }
@@ -192,12 +192,11 @@ public class DefaultLocalCache
         }
 
         public void check() {
-            for (ConcurrentHashMap<String, SoftReference<CacheParams>> cache : caches) {
+            for (ConcurrentHashMap<K, SoftReference<V>> cache : caches) {
                 try {
-
-                    Iterator<String> keys = cache.keySet().iterator();
+                    Iterator<K> keys = cache.keySet().iterator();
                     while (keys.hasNext()) {
-                        String key = keys.next();
+                        K key = keys.next();
                         if (this.expiryCache.get(key) != null) {
                             long date = this.expiryCache.get(key);
                             if (date > 0 && new Date(date).before(new Date())) {
@@ -208,7 +207,7 @@ public class DefaultLocalCache
                                         }
                                     }
                                 } catch (Exception e) {
-
+                                    Logger.debug("WWWWWWW----- thread error2  " + e.toString());
                                 }
                                 this.expiryCache.remove(key);
                                 cache.get(key).clear();
@@ -216,8 +215,9 @@ public class DefaultLocalCache
                             }
                         }
                     }
-                } catch (Exception ex) {
-                    ex.printStackTrace();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Logger.debug("WWWWWWW----- thread error  " + e.toString());
                 }
             }
         }

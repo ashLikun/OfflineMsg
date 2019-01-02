@@ -8,6 +8,6 @@ package com.qiuzhping.openfire.plugin;
  * 功能介绍：
  */
 
-public abstract interface ClearCacheListener {
-    public abstract void doClear(CacheParams softReference);
+public abstract interface ClearCacheListener<V> {
+    public abstract void doClear(V softReference);
 }
