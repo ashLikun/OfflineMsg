@@ -1,5 +1,6 @@
 package com.qiuzhping.openfire.plugin;
 
+import org.dom4j.Element;
 import org.jivesoftware.openfire.OfflineMessage;
 import org.jivesoftware.openfire.OfflineMessageListener;
 import org.jivesoftware.openfire.OfflineMessageStore;
@@ -20,6 +21,7 @@ import org.jivesoftware.openfire.session.Session;
 import org.jivesoftware.openfire.user.UserManager;
 import org.jivesoftware.openfire.user.UserNotFoundException;
 import org.jivesoftware.util.JiveGlobals;
+import org.jivesoftware.util.XMPPDateTimeFormat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xmpp.component.IQResultListener;
@@ -31,6 +33,7 @@ import org.xmpp.packet.Presence;
 
 import java.io.File;
 import java.util.Collection;
+import java.util.Date;
 /**
  * else if (message.getType() == Message.Type.groupchat) {
  * <p>
@@ -235,9 +238,12 @@ public class OfflineMsg implements PacketInterceptor, Plugin, ClearCacheListener
     }
 
     private void userUnavailable(JID recipient, Presence presence, Message sendmessage) {
-        //会话失效
-        debug("WWWWWWW----- save    user = " + recipient.toString());
         try {
+            //会话失效
+            debug("WWWWWWW----- save    user = " + recipient.toString() + "       " + sendmessage.getBody());
+            Element delayInformation = sendmessage.addChildElement("delay", "urn:xmpp:delay");
+            delayInformation.addAttribute("stamp", XMPPDateTimeFormat.format(new Date()));
+            delayInformation.addAttribute("from", XMPPServer.getInstance().getServerInfo().getXMPPDomain());
             //插入离线消息
             offlineMessageStrategy.storeOffline(sendmessage);
             //缓存消息

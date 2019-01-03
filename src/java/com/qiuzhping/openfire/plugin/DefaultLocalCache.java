@@ -128,7 +128,7 @@ public class DefaultLocalCache<K, V>
 
 
     public void remove(K key) {
-        getCache(key).clear();
+        getCache(key).remove(key);
         this.expiryCache.remove(key);
     }
 
@@ -210,7 +210,7 @@ public class DefaultLocalCache<K, V>
                                     Logger.debug("WWWWWWW----- thread error2  " + e.toString());
                                 }
                                 this.expiryCache.remove(key);
-                                cache.get(key).clear();
+                                cache.remove(key);
                                 cache.remove(key);
                             }
                         }
