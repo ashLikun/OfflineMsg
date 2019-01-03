@@ -10,8 +10,8 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -28,8 +28,8 @@ public class DefaultLocalCache<K, V>
     private static final Log Logger = LogFactory.getLog(DefaultLocalCache.class);
     private ClearCacheListener clearCacheListener;
     private static final DefaultLocalCache instance = new DefaultLocalCache();
-    ConcurrentHashMap<K, SoftReference<V>>[] caches;
-    ConcurrentHashMap<K, Long> expiryCache;
+    LinkedHashMap<K, SoftReference<V>>[] caches;
+    LinkedHashMap<K, Long> expiryCache;
     private ScheduledExecutorService scheduleService;
 
     private void DefaultLocalCache() {
@@ -65,11 +65,11 @@ public class DefaultLocalCache<K, V>
     }
 
     private void init() {
-        this.caches = new ConcurrentHashMap[this.moduleSize];
+        this.caches = new LinkedHashMap[this.moduleSize];
         for (int i = 0; i < this.moduleSize; i++) {
-            this.caches[i] = new ConcurrentHashMap();
+            this.caches[i] = new LinkedHashMap();
         }
-        this.expiryCache = new ConcurrentHashMap();
+        this.expiryCache = new LinkedHashMap();
 
         this.scheduleService = Executors.newScheduledThreadPool(1);
 
@@ -81,7 +81,7 @@ public class DefaultLocalCache<K, V>
 
     public boolean clear() {
         if (this.caches != null) {
-            for (ConcurrentHashMap<K, SoftReference<V>> cache : this.caches) {
+            for (LinkedHashMap<K, SoftReference<V>> cache : this.caches) {
                 cache.clear();
             }
         }
@@ -138,7 +138,7 @@ public class DefaultLocalCache<K, V>
 
     public Collection<V> values() {
         Collection<V> values = new ArrayList();
-        for (ConcurrentHashMap<K, SoftReference<V>> cache : this.caches) {
+        for (LinkedHashMap<K, SoftReference<V>> cache : this.caches) {
             for (SoftReference<V> sr : cache.values()) {
                 values.add(sr.get());
             }
@@ -146,7 +146,7 @@ public class DefaultLocalCache<K, V>
         return values;
     }
 
-    private ConcurrentHashMap<K, SoftReference<V>> getCache(K key) {
+    private LinkedHashMap<K, SoftReference<V>> getCache(K key) {
         long hashCode = key.hashCode();
         if (hashCode < 0L) {
             hashCode = -hashCode;
@@ -179,10 +179,10 @@ public class DefaultLocalCache<K, V>
 
     class CheckOutOfDateSchedule
             implements Runnable {
-        ConcurrentHashMap<K, SoftReference<V>>[] caches;
-        ConcurrentHashMap<K, Long> expiryCache;
+        LinkedHashMap<K, SoftReference<V>>[] caches;
+        LinkedHashMap<K, Long> expiryCache;
 
-        public CheckOutOfDateSchedule(ConcurrentHashMap<K, SoftReference<V>>[] caches, ConcurrentHashMap<K, Long> expiryCache) {
+        public CheckOutOfDateSchedule(LinkedHashMap<K, SoftReference<V>>[] caches, LinkedHashMap<K, Long> expiryCache) {
             this.caches = caches;
             this.expiryCache = expiryCache;
         }
@@ -192,7 +192,7 @@ public class DefaultLocalCache<K, V>
         }
 
         public void check() {
-            for (ConcurrentHashMap<K, SoftReference<V>> cache : caches) {
+            for (LinkedHashMap<K, SoftReference<V>> cache : caches) {
                 try {
                     Iterator<K> keys = cache.keySet().iterator();
                     while (keys.hasNext()) {

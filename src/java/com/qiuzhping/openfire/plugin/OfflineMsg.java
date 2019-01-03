@@ -236,7 +236,7 @@ public class OfflineMsg implements PacketInterceptor, Plugin, ClearCacheListener
 
     private void userUnavailable(JID recipient, Presence presence, Message sendmessage) {
         //会话失效
-        debug("WWWWWWW----- save    user = " + recipient.toFullJID());
+        debug("WWWWWWW----- save    user = " + recipient.toString());
         try {
             //插入离线消息
             offlineMessageStrategy.storeOffline(sendmessage);
@@ -248,7 +248,7 @@ public class OfflineMsg implements PacketInterceptor, Plugin, ClearCacheListener
             presenceManager.userUnavailable(presence);
         } catch (Exception e) {
             e.printStackTrace();
-            debug("WWWWWWW----- save  catch  user = " + recipient.toFullJID() + "   e = " + e.toString());
+            debug("WWWWWWW----- save  catch  user = " + recipient.toString() + "   e = " + e.toString());
         }
 
     }
