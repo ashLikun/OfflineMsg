@@ -126,31 +126,36 @@ public class OfflineMsg implements PacketInterceptor, Plugin, ClearCacheListener
      */
     @Override
     public void interceptPacket(Packet packet, Session session, boolean incoming, boolean processed) throws PacketRejectedException {
-        JID recipient = packet.getTo();
-        if (recipient != null) {
-            String username = recipient.getNode();
-            // if broadcast message or user is not exist
-            if (username == null || !UserManager.getInstance().isRegisteredUser(recipient)) {
-                checkIq(packet);
-                return;
-            } else if (!XMPPServer.getInstance().getServerInfo().getXMPPDomain().equals(recipient.getDomain())) {
+        try {
+            JID recipient = packet.getTo();
+            if (recipient != null) {
+                String username = recipient.getNode();
+                // if broadcast message or user is not exist
+                if (username == null || !UserManager.getInstance().isRegisteredUser(recipient)) {
+                    checkIq(packet);
+                    return;
+                } else if (!XMPPServer.getInstance().getServerInfo().getXMPPDomain().equals(recipient.getDomain())) {
+                    return;
+                }
+            }
+            // incoming表示本条消息刚进入openfire。processed为false，表示本条消息没有被openfire处理过。这说明这是一条处女消息，也就是没有被处理过的消息。
+            if (processed || !incoming) {
                 return;
             }
+            this.doAction(packet, session);
+        } catch (Exception e) {
+            e.printStackTrace();
+            debug("WWWWWWW----- error interceptPacket " + e.toString());
         }
-        // incoming表示本条消息刚进入openfire。processed为false，表示本条消息没有被openfire处理过。这说明这是一条处女消息，也就是没有被处理过的消息。
-        if (processed || !incoming) {
-            return;
-        }
-        this.doAction(packet, session);
     }
 
     private void checkIq(Packet packet) {
         if ((packet instanceof IQ)) {
             IQ iq = (IQ) packet;
-            if (iq.getFrom().getResource() != null && iq.getFrom().getNode() != null && iq.getType() == IQ.Type.result
+            if (iq.getType() == IQ.Type.result
                     && CACHE_CHAT_CONNECTION.containsKey(iq.getID())
-                    && (iq.getTo().getDomain().equals(XMPPServer.getInstance().getServerInfo().getXMPPDomain()))) {
-                debug("WWWWWWW----- remove" + iq.getTo().getDomain() + "     getFrom = " + iq.getFrom().getNode());
+                    && (iq.getTo() != null && iq.getTo().getDomain().equals(XMPPServer.getInstance().getServerInfo().getXMPPDomain()))) {
+                debug("WWWWWWW----- remove ok " + iq.toXML());
                 CACHE_CHAT_CONNECTION.remove(iq.getID());
             }
         }
