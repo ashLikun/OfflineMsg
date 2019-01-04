@@ -5,6 +5,8 @@ import org.xmpp.packet.JID;
 import org.xmpp.packet.Message;
 import org.xmpp.packet.Presence;
 
+import java.util.Date;
+
 /**
  * 作者　　: 李坤
  * 创建时间: 2018/12/29　16:06
@@ -18,4 +20,9 @@ class CacheParams {
     JID recipient;
     Presence presence;
     IQ pingRequest;
+    Date date;
+
+    public CacheParams() {
+        date = new Date();
+    }
 }

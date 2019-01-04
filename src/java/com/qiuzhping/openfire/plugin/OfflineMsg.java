@@ -32,8 +32,8 @@ import org.xmpp.packet.Packet;
 import org.xmpp.packet.Presence;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
 /**
  * else if (message.getType() == Message.Type.groupchat) {
  * <p>
@@ -74,10 +74,10 @@ import java.util.Date;
  * 功能介绍：
  */
 
-public class OfflineMsg implements PacketInterceptor, Plugin, ClearCacheListener<CacheParams>, OfflineMessageListener {
+public class OfflineMsg implements PacketInterceptor, Plugin, ClearCacheUserListener, OfflineMessageListener {
 
     private static final Logger log = LoggerFactory.getLogger(OfflineMsg.class);
-    public ICache<String, CacheParams> CACHE_CHAT_CONNECTION;
+    public DefaultLocalUserCache<String> CACHE_CHAT_CONNECTION;
     //为了不重复保存离线消息
     public ICache<String, Message> CACHE_MESSAGE;
     //Hook for intercpetorn
@@ -102,7 +102,7 @@ public class OfflineMsg implements PacketInterceptor, Plugin, ClearCacheListener
     public void initializePlugin(PluginManager manager, File pluginDirectory) {
         interceptorManager = InterceptorManager.getInstance();
         interceptorManager.addInterceptor(this);
-        CACHE_CHAT_CONNECTION = new DefaultLocalCache(1, 1, this);
+        CACHE_CHAT_CONNECTION = new DefaultLocalUserCache(1, 1, this);
         //10分钟清空一次缓存
         CACHE_MESSAGE = new DefaultLocalCache(10 * 60, 1, null);
         XMPPServer server = XMPPServer.getInstance();
@@ -237,34 +237,54 @@ public class OfflineMsg implements PacketInterceptor, Plugin, ClearCacheListener
         }
     }
 
-    private void userUnavailable(JID recipient, Presence presence, Message sendmessage) {
+    private void userUnavailable(CacheParams cacheParams) {
+        if (cacheParams == null || cacheParams.recipient == null) {
+            return;
+        }
         try {
-            //会话失效
-            debug("WWWWWWW----- save    user = " + recipient.toString() + "       " + sendmessage.getBody());
-            Element delayInformation = sendmessage.addChildElement("delay", "urn:xmpp:delay");
-            delayInformation.addAttribute("stamp", XMPPDateTimeFormat.format(new Date()));
-            delayInformation.addAttribute("from", XMPPServer.getInstance().getServerInfo().getXMPPDomain());
-            //插入离线消息
-            offlineMessageStrategy.storeOffline(sendmessage);
-            //缓存消息
-            CACHE_MESSAGE.put(sendmessage.getID(), sendmessage, 10 * 60);
+            //设置用户下线
+            debug("WWWWWWW----- set user ofline = " + cacheParams.recipient.toString());
             //清空内存缓存
-            routingTable.removeClientRoute(recipient);
+            routingTable.removeClientRoute(cacheParams.recipient);
             //用户离线
-            presenceManager.userUnavailable(presence);
+            presenceManager.userUnavailable(cacheParams.presence);
         } catch (Exception e) {
             e.printStackTrace();
-            debug("WWWWWWW----- save  catch  user = " + recipient.toString() + "   e = " + e.toString());
+            debug("WWWWWWW----- set user ofline error = " + cacheParams.recipient.toString() + "   e = " + e.toString());
         }
 
     }
 
-    @Override
-    public void doClear(CacheParams cacheParams) {
-        if (cacheParams != null) {
-            if (cacheParams.recipient != null && cacheParams.presence != null && cacheParams.message != null) {
-                userUnavailable(cacheParams.recipient, cacheParams.presence, cacheParams.message);
+    private void saveOffline(CacheParams cacheParams) {
+        try {
+            if (cacheParams == null || cacheParams.recipient == null || cacheParams.message == null) {
+                return;
             }
+            //保存离线消息的时间
+            debug("WWWWWWW----- save offline message = " + cacheParams.recipient.toString() + "       " + cacheParams.message.getBody());
+            if (cacheParams.message.getChildElement("delay", "urn:xmpp:delay") == null) {
+                Element delayInformation = cacheParams.message.addChildElement("delay", "urn:xmpp:delay");
+                delayInformation.addAttribute("stamp", XMPPDateTimeFormat.format(cacheParams.date));
+                delayInformation.addAttribute("from", XMPPServer.getInstance().getServerInfo().getXMPPDomain());
+            }
+            //插入离线消息
+            offlineMessageStrategy.storeOffline(cacheParams.message);
+            //缓存消息,防止服务器自己又保存了一次
+            CACHE_MESSAGE.put(cacheParams.message.getID(), cacheParams.message, 10 * 60);
+        } catch (Exception e) {
+            debug("WWWWWWW----- save offline message  error = " + cacheParams.recipient.toString() + "       " + cacheParams.message.getBody());
+        }
+    }
+
+    @Override
+    public void doClear(ArrayList<CacheParams> softReference) {
+        if (softReference != null && !softReference.isEmpty()) {
+            for (int i = 0; i < softReference.size(); i++) {
+                //保存这个用户的全部消息到离线表
+                saveOffline(softReference.get(i));
+            }
+            //强制用户下线
+            userUnavailable(softReference.get(0));
         }
     }
 
@@ -318,7 +338,6 @@ public class OfflineMsg implements PacketInterceptor, Plugin, ClearCacheListener
 
         @Override
         public void answerTimeout(String s) {
-            userUnavailable(recipient, presence, sendmessage);
         }
     }
 }
