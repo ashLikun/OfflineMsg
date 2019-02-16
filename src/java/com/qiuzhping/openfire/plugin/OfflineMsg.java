@@ -317,6 +317,9 @@ public class OfflineMsg implements PacketInterceptor, Plugin, ClearCacheUserList
                     break;
                 }
             }
+        } else {
+            //存储一条消息时候调用自己的后台接口，推送
+            HttpUtils.postMessage(message);
         }
     }
 

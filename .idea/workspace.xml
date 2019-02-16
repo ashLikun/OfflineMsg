@@ -7,15 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d208a636-fd56-4711-93f0-1549e2e3e509" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/openfire.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/HttpUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OfflineMsg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OfflineMsg.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OfflineMsg.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/OfflineMsg/OfflineMsg.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/OfflineMsg/OfflineMsg.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OfflineMsg/com/qiuzhping/openfire/plugin/DefaultLocalCache$CheckOutOfDateSchedule.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OfflineMsg/com/qiuzhping/openfire/plugin/DefaultLocalCache$CheckOutOfDateSchedule.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OfflineMsg/com/qiuzhping/openfire/plugin/DefaultLocalCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OfflineMsg/com/qiuzhping/openfire/plugin/DefaultLocalCache.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OfflineMsg/com/qiuzhping/openfire/plugin/OfflineMsg$MyIQResultListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OfflineMsg/com/qiuzhping/openfire/plugin/OfflineMsg$MyIQResultListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OfflineMsg/com/qiuzhping/openfire/plugin/OfflineMsg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OfflineMsg/com/qiuzhping/openfire/plugin/OfflineMsg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/DefaultLocalCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/DefaultLocalCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OfflineMsg/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OfflineMsg/plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/OfflineMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/OfflineMsg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/res/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/res/plugin.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,49 +72,52 @@
     <session id="-258730021">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="151" />
-          <entry key="java" value="96" />
+          <entry key="class" value="155" />
+          <entry key="java" value="106" />
           <entry key="properties" value="2" />
-          <entry key="xml" value="7" />
+          <entry key="xml" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="151" />
-          <entry key="JAVA" value="96" />
+          <entry key="CLASS" value="155" />
+          <entry key="JAVA" value="106" />
           <entry key="Properties" value="2" />
-          <entry key="XML" value="7" />
+          <entry key="XML" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="class" value="1" />
           <entry key="dummy" value="2" />
-          <entry key="java" value="3761" />
+          <entry key="java" value="4111" />
           <entry key="properties" value="35" />
-          <entry key="xml" value="61" />
+          <entry key="xml" value="62" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="3761" />
+          <entry key="JAVA" value="4111" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="35" />
-          <entry key="XML" value="61" />
+          <entry key="XML" value="62" />
         </counts>
       </usages-collector>
     </session>
@@ -120,10 +125,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/OfflineMsg.java">
+        <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/HttpUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="245" column="25" lean-forward="true" selection-start-line="245" selection-start-column="25" selection-end-line="245" selection-end-column="25" />
+            <state relative-caret-position="499">
+              <caret line="57" column="58" lean-forward="true" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,16 +148,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>loadModule</find>
-      <find>resultListeners</find>
-      <find>resultTimeout</find>
       <find>TimeoutTask</find>
       <find>packetRouter</find>
       <find>session</find>
       <find>packetRouter =</find>
       <find>deliverer =</find>
       <find>handleIQ</find>
-      <find>WWWWWWW</find>
       <find>catch</find>
       <find>checkValidate</find>
       <find>Packet</find>
@@ -173,6 +174,10 @@
       <find>ConcurrentHashMap</find>
       <find>expiryCache</find>
       <find>clear</find>
+      <find>CheckOutOfDateSchedule</find>
+      <find>scheduleService</find>
+      <find>WWWWWWW</find>
+      <find>thread error</find>
     </findStrings>
     <replaceStrings>
       <replace>myoffline</replace>
@@ -199,14 +204,15 @@
         <option value="$PROJECT_DIR$/build/build.xml" />
         <option value="$PROJECT_DIR$/build/build.properties" />
         <option value="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/MessageACKStorge.java" />
-        <option value="$PROJECT_DIR$/src/res/plugin.xml" />
         <option value="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/CacheParams.java" />
         <option value="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/ICache.java" />
         <option value="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/OfflineMsgOld.java" />
         <option value="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/IQRouter.java" />
         <option value="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/ClearCacheListener.java" />
-        <option value="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/DefaultLocalCache.java" />
         <option value="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/OfflineMsg.java" />
+        <option value="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/DefaultLocalCache.java" />
+        <option value="$PROJECT_DIR$/src/res/plugin.xml" />
+        <option value="$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/HttpUtils.java" />
       </list>
     </option>
   </component>
@@ -229,8 +235,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,13 +261,49 @@
               <item name="OfflineMsg" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OfflineMsg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OfflineMsg" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="qiuzhping" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OfflineMsg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OfflineMsg" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="qiuzhping" type="462c0819:PsiDirectoryNode" />
+              <item name="openfire" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OfflineMsg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OfflineMsg" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="qiuzhping" type="462c0819:PsiDirectoryNode" />
+              <item name="openfire" type="462c0819:PsiDirectoryNode" />
               <item name="plugin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OfflineMsg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OfflineMsg" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OfflineMsg" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -271,34 +314,35 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="D:/android_studio/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546252135892" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../openfire_src" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550216757799" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/openfire.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.qiuzhping.openfire.plugin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\likun\inteij\OfflineMsg" />
+      <recent name="D:\likun\inteij\OfflineMsg\src\plugins\offlinemsg" />
+      <recent name="D:\likun\inteij\OfflineMsg\out\production\OfflineMsg" />
+      <recent name="D:\likun\inteij\OpenfirePlugins\src" />
+      <recent name="D:\likun\inteij\OpenfirePlugins" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qiuzhping.openfire.plugin" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\likun\inteij\OfflineMsg\src\res" />
       <recent name="D:\likun\inteij\OfflineMsg\src" />
       <recent name="D:\likun\inteij\OfflineMsg\res" />
       <recent name="D:\likun\inteij\OfflineMsg\src\plugins\offlinemsg" />
       <recent name="D:\likun\inteij\OfflineMsg\out\production\OfflineMsg" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.qiuzhping.openfire.plugin" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.qiuzhping.openfire.plugin" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\likun\inteij\OfflineMsg\src\plugins\offlinemsg" />
-      <recent name="D:\likun\inteij\OfflineMsg\out\production\OfflineMsg" />
-      <recent name="D:\likun\inteij\OpenfirePlugins\src" />
-      <recent name="D:\likun\inteij\OpenfirePlugins" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -371,17 +415,21 @@
       <workItem from="1546256610636" duration="1626000" />
       <workItem from="1546439338705" duration="7147000" />
       <workItem from="1546530839856" duration="4764000" />
+      <workItem from="1550195474275" duration="3375000" />
+      <workItem from="1550201924661" duration="908000" />
+      <workItem from="1550219362245" duration="378000" />
+      <workItem from="1550219946901" duration="429000" />
+      <workItem from="1550294261487" duration="668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95469000" />
+    <option name="totallyTimeSpent" value="101227000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.28" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29777777" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -432,154 +480,22 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/util/TaskEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="219" column="16" selection-start-line="219" selection-start-column="16" selection-end-line="219" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/OfflineMsgOld.java" />
-    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/session/Session.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/SessionPacketRouter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/PacketRouter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/MulticastRouter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="405" column="45" selection-start-line="405" selection-start-column="45" selection-end-line="405" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/XMPPServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="1136" column="50" selection-start-line="1136" selection-start-column="50" selection-end-line="1136" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/spi/PacketRouterImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="73" column="20" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/IQRouter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="752">
-          <caret line="368" column="34" selection-start-line="368" selection-start-column="34" selection-end-line="368" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/IQHandlerInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/disco/ServerFeaturesProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/xmpp/packet/IQ.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="169" column="21" selection-start-line="169" selection-start-column="15" selection-end-line="169" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/handler/IQPingHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/handler/IQHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="63" column="25" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/PacketDeliverer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/spi/PacketDelivererImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-79">
-          <caret line="31" column="72" selection-start-line="31" selection-start-column="72" selection-end-line="31" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/net/SocketPacketWriteHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="70" column="17" selection-start-line="67" selection-start-column="16" selection-end-line="70" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/RoutingTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="149" column="9" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/spi/RoutingTableImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="236" column="50" selection-start-line="236" selection-start-column="44" selection-end-line="236" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/PacketDeliverer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/spi/PacketDelivererImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/privacy/PrivacyList.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="70" column="19" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/XMPPServer.java" />
+    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/spi/PacketRouterImpl.java" />
+    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/IQRouter.java" />
+    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/IQHandlerInfo.java" />
+    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/disco/ServerFeaturesProvider.java" />
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/xmpp/packet/IQ.class" />
+    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/handler/IQPingHandler.java" />
+    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/handler/IQHandler.java" />
+    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/PacketDeliverer.java" />
+    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/spi/PacketDelivererImpl.java" />
+    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/net/SocketPacketWriteHandler.java" />
+    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/RoutingTable.java" />
+    <entry file="file://$PROJECT_DIR$/../openfire_src/src/java/org/jivesoftware/openfire/spi/RoutingTableImpl.java" />
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/PacketDeliverer.class" />
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/spi/PacketDelivererImpl.class" />
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/privacy/PrivacyList.class" />
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Map.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -587,111 +503,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/spi/LocalRoutingTable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="89" column="36" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/net/SocketPacketWriteHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/component/InternalComponentManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5866">
-          <caret line="348" column="16" selection-start-line="348" selection-start-column="16" selection-end-line="348" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/OfflineMessageListener.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/ChannelHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/server/OutgoingSessionPromise.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1480">
-          <caret line="172" column="21" selection-start-line="172" selection-start-column="21" selection-end-line="172" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/privacy/PrivacyListManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="16" column="56" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="106" column="36" selection-start-line="106" selection-start-column="29" selection-end-line="106" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/xmpp/packet/Packet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1305">
-          <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/OfflineMessage.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/XMPPServer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18647">
-          <caret line="763" column="21" selection-start-line="763" selection-start-column="21" selection-end-line="763" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/MessageRouter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/RoutingTable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/spi/RoutingTableImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4031">
-          <caret line="194" column="50" selection-start-line="194" selection-start-column="44" selection-end-line="194" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/xmpp/packet/JID.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="441" column="31" selection-start-line="441" selection-start-column="27" selection-end-line="441" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/spi/LocalRoutingTable.class" />
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/net/SocketPacketWriteHandler.class" />
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/component/InternalComponentManager.class" />
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/OfflineMessageListener.class" />
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/ChannelHandler.class" />
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/server/OutgoingSessionPromise.class" />
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/privacy/PrivacyListManager.class" />
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/xmpp/packet/Packet.class" />
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/OfflineMessage.class" />
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/XMPPServer.class" />
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/MessageRouter.class" />
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/RoutingTable.class" />
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/spi/RoutingTableImpl.class" />
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/xmpp/packet/JID.class" />
     <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/ClearCacheListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -713,13 +538,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/com/sun/syndication/fetcher/impl/LinkedHashMapFeedInfoCache.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/com/sun/syndication/fetcher/impl/LinkedHashMapFeedInfoCache.class" />
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/LinkedHashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
@@ -731,10 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="263" column="16" selection-start-line="263" selection-start-column="16" selection-end-line="263" selection-end-column="16" />
-          <folding>
-            <element signature="e#9683#9684#0" expanded="true" />
-            <element signature="e#9719#9720#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -742,19 +557,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/database/SequenceManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="27" column="38" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/database/SequenceManager.class" />
     <entry file="jar://D:/Program Files/Java/jdk1.8.0_171/src.zip!/java/sql/PreparedStatement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="489">
@@ -762,34 +568,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/OfflineMessageStore.class">
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/OfflineMessageStore.class" />
+    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/OfflineMessageStrategy.class" />
+    <entry file="jar://$PROJECT_DIR$/openfire.jar!/org/xmpp/packet/Packet.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="81" column="54" selection-start-line="81" selection-start-column="45" selection-end-line="81" selection-end-column="54" />
+        <state relative-caret-position="211">
+          <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../openfire_src/target/openfire/lib/openfire.jar!/org/jivesoftware/openfire/OfflineMessageStrategy.class">
+    <entry file="jar://$PROJECT_DIR$/openfire.jar!/org/xmpp/packet/JID.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+        <state relative-caret-position="319">
+          <caret line="405" column="21" selection-start-line="405" selection-start-column="17" selection-end-line="405" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/concurrent/ScheduledExecutorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3480">
+          <caret line="153" column="49" selection-start-line="153" selection-start-column="30" selection-end-line="153" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/CacheParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/res/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/OfflineMsg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="83" column="47" selection-start-line="83" selection-start-column="47" selection-end-line="83" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3077#3078#0" expanded="true" />
+            <element signature="e#3107#3108#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/DefaultLocalCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="839">
-          <caret line="217" column="10" selection-start-line="217" selection-start-column="10" selection-end-line="217" selection-end-column="10" />
+        <state relative-caret-position="563">
+          <caret line="216" column="21" selection-start-line="216" selection-start-column="21" selection-end-line="216" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/OfflineMsg.java">
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="245" column="25" lean-forward="true" selection-start-line="245" selection-start-column="25" selection-end-line="245" selection-end-column="25" />
+        <state relative-caret-position="182">
+          <caret line="914" column="32" lean-forward="true" selection-start-line="914" selection-start-column="32" selection-end-line="914" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/qiuzhping/openfire/plugin/HttpUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="57" column="58" lean-forward="true" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
